@@ -79,5 +79,6 @@ $brands = isset($_GET['b']) ? json_decode(urldecode($_GET['b'])) : array();
 <script>
     $(function(){
     })
+    
 
 </script>

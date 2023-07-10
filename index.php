@@ -23,6 +23,7 @@
 
     }
 ?>
+
 <?php require_once('inc/footer.php') ?>
 
   <div class="modal fade" id="uni_modal" role='dialog'>
