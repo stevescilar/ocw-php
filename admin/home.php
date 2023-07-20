@@ -42,15 +42,33 @@
             <div class="info-box">
               <span class="info-box-icon bg-gradient-teal elevation-1"><i class="fas fa-calendar-day"></i></span>
               <div class="info-box-content">
-                <span class="info-box-text">Upcoming Appointment</span>
+                <span class="info-box-text">Pending Appointments</span>
                 <span class="info-box-number">
                   <?php 
-                    $current_date = date('Y-m-d');
+                    // $current_date = date('Y-m-d');
 
-                    $upcoming = $conn->query("SELECT * FROM booking_list WHERE `status` = 0 AND date(`schedule`)= '$current_date'")->num_rows;
+                    $upcoming = $conn->query("SELECT * FROM booking_list WHERE `status` = 0 ")->num_rows;
                    
 
                     echo format_num($upcoming);
+                  ?>
+                  <?php ?>
+                </span>
+              </div>
+              <!-- /.info-box-content -->
+            </div>
+            <div class="info-box">
+              <span class="info-box-icon bg-gradient-teal elevation-1"><i class="fas fa-calendar-day"></i></span>
+              <div class="info-box-content">
+                <span class="info-box-text">Confirmed Appointments</span>
+                <span class="info-box-number">
+                  <?php 
+                    // $current_date = date('Y-m-d');
+
+                    $confirmed= $conn->query("SELECT * FROM booking_list WHERE `status` = 1 ")->num_rows;
+                   
+
+                    echo format_num($confirmed);
                   ?>
                   <?php ?>
                 </span>
