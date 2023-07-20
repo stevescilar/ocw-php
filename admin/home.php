@@ -45,7 +45,11 @@
                 <span class="info-box-text">Upcoming Appointment</span>
                 <span class="info-box-number">
                   <?php 
-                    $upcoming = $conn->query("SELECT * FROM booking_list where `status` = 1 and date(`schedule`) = '".date('Y-m-d')."' ")->num_rows;
+                    $current_date = date('Y-m-d');
+
+                    $upcoming = $conn->query("SELECT * FROM booking_list WHERE `status` = 0 AND date(`schedule`)= '$current_date'")->num_rows;
+                   
+
                     echo format_num($upcoming);
                   ?>
                   <?php ?>
@@ -64,7 +68,10 @@
                 <span class="info-box-text">Finished Bookings</span>
                 <span class="info-box-number">
                   <?php 
-                    $done = $conn->query("SELECT * FROM booking_list where `status` = 4 and date(`schedule`) = '".date('Y-m-d')."' ")->num_rows;
+                    $current_date = date('Y-m-d');
+
+                    $done = $conn->query("SELECT * FROM booking_list WHERE `status` = 4 ")->num_rows;
+
                     echo format_num($done);
                   ?>
                   <?php ?>
