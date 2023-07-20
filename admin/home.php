@@ -42,7 +42,7 @@
             <div class="info-box">
               <span class="info-box-icon bg-gradient-teal elevation-1"><i class="fas fa-calendar-day"></i></span>
               <div class="info-box-content">
-                <span class="info-box-text">Upcoming Appiontment</span>
+                <span class="info-box-text">Upcoming Appointment</span>
                 <span class="info-box-number">
                   <?php 
                     $upcoming = $conn->query("SELECT * FROM booking_list where `status` = 1 and date(`schedule`) = '".date('Y-m-d')."' ")->num_rows;

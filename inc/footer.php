@@ -61,8 +61,8 @@
 <!-- Footer-->
 <footer class="py-4 bg-gradient-primary">
             <div class="container">
-              <p class="m-0 text-center text-white">Copyright &copy; <?php echo $_settings->info('short_name') ?> 2021</p>
-              <p class="m-0 text-center text-white">Developed By: <a href="mailto:oretnom23@gmail.com">oretnom23</a></p>
+              <p class="m-0 text-center text-white">Copyright &copy; <?php echo $_settings->info('short_name') ?> 2023</p>
+              <p class="m-0 text-center text-white">Developed By: <a href="mailto:oretnom23@gmail.com">Dev Karen</a></p>
           </div>
         </footer>
 
@@ -121,4 +121,4 @@
       </div>
       <div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div>
     </div>
-    <div class="jqvmap-label" style="display: none; left: 1093.83px; top: 394.361px;">Idaho</div>
+    <div class="jqvmap-label" style="display: none; left: 1093.83px; top: 394.361px;"></div>
