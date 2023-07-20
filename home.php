@@ -29,7 +29,7 @@ $brands = isset($_GET['b']) ? json_decode(urldecode($_GET['b'])) : array();
                                     
                             ?>
                             <div class="carousel-item h-100 <?php echo $_i == 1 ? "active" : '' ?>">
-                                <img src="<?php echo validate_image($upload_path.'/'.$img) ?>" class="d-block w-100  h-100" alt="<?php echo $img ?>">
+                                <img src="<?php echo validate_image($upload_path.'/'.$img) ?>" class="d-block w-100 " alt="<?php echo $img ?>">
                             </div>
                             <?php endforeach; ?>
                             <?php endif; ?>
@@ -57,13 +57,13 @@ $brands = isset($_GET['b']) ? json_decode(urldecode($_GET['b'])) : array();
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 py-4">
                         <h4 class="text-center"><b><?= $row['name'] ?> Service</b></h4>
                         <div class="row mx-0 my-2">
-                            <div class="col-5 border bg-primary m-0 text-center px-2 py-1">Vehicle Type</div>
-                            <div class="col-7 border bg-primary m-0 text-center px-2 py-1">Price</div>
+                            <div class="col-5 border bg-secondary m-0 text-center px-2 py-1">Vehicle Type</div>
+                            <div class="col-7 border bg-secondary m-0 text-center px-2 py-1">Price</div>
                             <?php 
                             $vehicles = $conn->query("SELECT v.name as vehicle, p.price FROM `vehicle_list` v inner join `price_list` p on v.id = p.vehicle_id where p.service_id = '{$row['id']}' and v.delete_flag = 0 and v.status = 1 order by abs(v.`name`) asc ");
                             while($vrow = $vehicles->fetch_assoc()):
                             ?>
-                            <div class="col-5 border bg-primary m-0 px-2 py-1"><?= $vrow['vehicle'] ?></div>
+                            <div class="col-5 border bg-info m-0 px-2 py-1"><?= $vrow['vehicle'] ?></div>
                             <div class="col-7 border m-0 px-2 py-1 text-right"><?= format_num($vrow['price']) ?></div>
                             <?php endwhile; ?>
                         </div>

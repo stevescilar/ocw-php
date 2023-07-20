@@ -62,7 +62,7 @@
 <footer class="py-4 bg-gradient-primary">
             <div class="container">
               <p class="m-0 text-center text-white">Copyright &copy; <?php echo $_settings->info('short_name') ?> 2023</p>
-              <p class="m-0 text-center text-white">Developed By: <a href="mailto:oretnom23@gmail.com">Dev Karen</a></p>
+              <p class="m-0 text-center text-white">Developed By: <a href="">Dev Karen</a></p>
           </div>
         </footer>
 
